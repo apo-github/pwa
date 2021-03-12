@@ -1,6 +1,6 @@
 {
-    "short_name": "PWAサンプル",
-    "name": "STUDENT_NETWORK",
+    "short_name": "ST_WORLD",
+    "name": "ST_WORLD",
     "display": "standalone",
     "start_url": "index.html",
     "icon": [
