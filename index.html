@@ -11,26 +11,21 @@
     <!-- ホーム画面に表示されるアプリ名 -->
     <meta name="apple-mobile-web-app-title" content="TAP10">
     <!-- ホーム画面に表示されるアプリアイコン -->
-    <link rel="apple-touch-icon" href="images/icon.png">
+    <link rel="apple-touch-icon" href="image/icon.png">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
     <title>Sample</title>
-    <script src="app.js"></script>
 </head>
 <body>
-    <div id="main">
-        <button type="button" id="hello">Hello</button>
-        <button type="button" id="bye">Bye</button>
-        <div id="message">
-           <button type="button" id="exit">Exit</button>
-        </div>
-    </div>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener("load", function() {
-                navigator.serviceWorker.register('sw.js');
-            });
-        }
-    </script>
+    <section class="container">
+        <h1 class="title">10秒で何回タップできるか</h1>
+        <button id="js-tapBtn" class="btn-tap" disabled>
+          <span id="js-count"></span><br>タップ!!
+        </button>
+        <div class="time">残り時間 <span id="js-time"></span> 秒</div>
+        <button id="js-startBtn" class="btn">START</button>
+      </section>
+      
+      <script src="app.js"></script>
 </body>
 </html>
