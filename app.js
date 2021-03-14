@@ -1,29 +1,6 @@
-// 変数定義
-let isPlaying = false
-let tapCount, time = 0
-const tapBtn    = document.getElementById('js-tapBtn')
-const startBtn  = document.getElementById('js-startBtn')
-const countText = document.getElementById('js-count')
-const timeText  = document.getElementById('js-time')
 
-// ゲームの初期値設定
-const setGame = () => {
-  tapCount = 0
-  time = 10000
-  countText.innerText = tapCount
-  timeText.innerHTML = time / 1000
-}
-setGame()
-
-// タップした時にカウントを増やす
-tapBtn.addEventListener('click', () => {
-  if (!isPlaying) return false
-  tapCount++
-  countText.innerText = tapCount
-})
-
-// STARTボタンを押してゲームをスタートさせる
-let btn = document.getElementById("startBtn");
+//関数定義
+const btn = document.getElementById("startBtn");
 btn.addEventListener('click', () => 
 {
   if(navigator.geolocation){
@@ -56,7 +33,6 @@ btn.addEventListener('click', () =>
         +'<dt>速度</dt><dd>' + speed + '</dd>'
         +'</dl>' ;
 
-        alert(resultMessage);
         document.getElementById('result').innerHTML = resultMessage;
 
       },
